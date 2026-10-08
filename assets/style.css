@@ -1,0 +1,83 @@
+:root{
+  --bg:#f4f7fb; --bg-2:#eaf1f8; --line:#cddce9;
+  --ink:#16283a; --ink-dim:#486483;
+  --blue:#1f5fa8; --navy:#0d3b66;
+  --display:'Fraunces',Georgia,serif;
+  --body:'Newsreader',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body)}
+a{color:var(--blue)}
+a:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--navy);color:#fff;padding:10px 14px;font:14px var(--sans);z-index:10}
+.skip:focus{left:8px}
+.wrap{max-width:680px;margin:0 auto;padding:0 24px}
+
+/* Masthead */
+.masthead{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+  background:url(rings.svg) no-repeat 78% 50%/560px auto}
+.masthead .wrap{padding-top:36px;padding-bottom:56px;position:relative}
+.topbar{display:flex;justify-content:space-between;align-items:baseline;font:14px var(--sans);margin-bottom:56px}
+.topbar a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--blue);padding-bottom:1px}
+.topbar a:hover{color:var(--navy);border-color:var(--navy)}
+.site-title{font:italic 500 56px/1.05 var(--display);color:var(--navy);margin:0 0 14px;max-width:9ch}
+.tagline{font-size:19px;line-height:1.5;color:var(--ink-dim);margin:0;max-width:34ch}
+.masthead.small .wrap{padding-bottom:20px}
+.masthead.small .topbar{margin-bottom:0}
+.masthead.small{background:none}
+
+/* Lista de artículos */
+.list-title{font:500 13px var(--sans);letter-spacing:.04em;color:var(--blue);margin:52px 0 8px}
+.entries{list-style:none;margin:0;padding:0}
+.entry{padding:32px 0;border-bottom:1px solid var(--line)}
+.entry:last-child{border-bottom:0}
+.entry-meta{font:13px var(--sans);color:var(--ink-dim);margin:0 0 10px}
+.entry-meta .tag{color:var(--blue);font-weight:500}
+.entry h2{font:500 30px/1.2 var(--display);margin:0 0 12px}
+.entry h2 a{color:var(--navy);text-decoration:none;background:linear-gradient(var(--blue),var(--blue)) 0 100%/0 2px no-repeat;transition:background-size .2s}
+.entry h2 a:hover,.entry h2 a:focus-visible{background-size:100% 2px}
+.entry p.excerpt{font-size:18px;line-height:1.65;color:var(--ink);margin:0 0 14px}
+.more{font:500 14px var(--sans);text-decoration:none;color:var(--blue)}
+.more:hover{color:var(--navy);text-decoration:underline}
+
+/* Artículo */
+.back{display:inline-block;font:14px var(--sans);margin:36px 0 0;text-decoration:none}
+.back:hover{text-decoration:underline}
+.post-head{padding:28px 0 12px}
+.byline{font:13px var(--sans);color:var(--blue);margin:0 0 16px;font-weight:500}
+h1.post-title{font:italic 500 44px/1.12 var(--display);color:var(--navy);margin:0 0 20px}
+.dek{font-size:20px;line-height:1.6;color:var(--ink-dim);margin:0}
+.meta-row{font:13px var(--sans);color:var(--ink-dim);margin-top:24px;display:flex;gap:18px}
+.post-body{padding:28px 0 40px}
+p.verse{font-size:19px;line-height:1.85;margin:0 0 32px}
+p.verse strong{font-weight:700;color:var(--navy)}
+blockquote{margin:52px 0;padding:0 0 0 22px;border-left:3px solid var(--blue)}
+blockquote p{font:italic 500 25px/1.45 var(--display);color:var(--blue);margin:0}
+.close-line{font:italic 500 22px/1.55 var(--display);margin:52px 0 0;padding-top:30px;border-top:1px solid var(--line)}
+h2.sub{font:600 28px/1.2 var(--display);color:var(--navy);margin:44px 0 18px}
+figure{margin:8px 0 40px}
+figure .frame{background:#fff;border:1px solid var(--line);padding:12px}
+figure img{display:block;width:100%;height:auto}
+figcaption{font:13px/1.5 var(--sans);color:var(--ink-dim);margin-top:12px}
+.flow{font:600 21px/1.6 var(--display);color:var(--blue);margin:44px 0 0;padding-top:26px;border-top:1px solid var(--line)}
+.pager{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding:24px 0;font:14px var(--sans)}
+.pager a{text-decoration:none;max-width:48%}
+.pager a:hover{text-decoration:underline}
+.pager .next{text-align:right;margin-left:auto}
+
+footer{border-top:1px solid var(--line);margin-top:24px}
+footer .wrap{padding-top:28px;padding-bottom:56px;font:13px var(--sans);color:var(--ink-dim)}
+
+@media(max-width:520px){
+  .masthead{background-position:100% 60%;background-size:380px auto}
+  .site-title{font-size:42px}
+  .tagline{font-size:17px}
+  .entry h2{font-size:25px}
+  .entry p.excerpt,p.verse{font-size:17px}
+  h1.post-title{font-size:34px}
+  .dek{font-size:17px}
+  blockquote p{font-size:21px}
+  .flow{font-size:18px}
+}
